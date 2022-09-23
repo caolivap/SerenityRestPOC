@@ -5,17 +5,20 @@ Serenity REST, Java language, Maven as build and dependencies management tool. A
 
 This project was created to solve the knowledge test of the company **Lulo Bank**  
 
-<!-- TABLE OF CONTENTS -->
 
+<!-- Table of Contents -->
 ## Table of Contents
+  - [What do you need 🛠️](#what-do-you-need-before-downloading-the-repository-)
+  - [About Screenplay pattern 🧮](#about-screenplay-pattern-and-rest-apis-)
+  - [Project structure 🗼](#project-structure-)
+  - [Compilation ⚙️](#compilation-)
+  - [Execution 🚀](#execution-)
+<!-- TOC -->
 
-- [What do you need](##what-do-you-need)
-- [Getting Started](##about-screenplay-pattern)
-- [Project structure](##project-structure)
-- [Compilation](##compilation)
-- [Execution](##execution)
 
-<!-- WHAT DO YOU NEED -->
+
+
+
 ## What do you need before downloading the repository 🛠️ ##
 
 - Java JDK 1.8
