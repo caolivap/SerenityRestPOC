@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.rest.interactions.Get;
 import net.serenitybdd.screenplay.rest.interactions.Post;
+import net.thucydides.core.annotations.Step;
 
 import static com.carlos.automation.endpoints.Users.USERS;
 
@@ -22,6 +23,7 @@ public class Create implements Task {
         return new Create(user);
     }
 
+    @Step("{0} tries register an user")
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(

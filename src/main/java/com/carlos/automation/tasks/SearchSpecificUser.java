@@ -9,11 +9,11 @@ import net.thucydides.core.annotations.Step;
 import static com.carlos.automation.endpoints.Users.USERS;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class SearchUser implements Task {
+public class SearchSpecificUser implements Task {
 
     private final String userId;
 
-    public SearchUser(String userId) {
+    public SearchSpecificUser(String userId) {
         this.userId = userId;
     }
 
@@ -28,6 +28,6 @@ public class SearchUser implements Task {
     }
 
     public static Performable by(String userId) {
-        return instrumented(SearchUser.class, userId);
+        return instrumented(SearchSpecificUser.class, userId);
     }
 }

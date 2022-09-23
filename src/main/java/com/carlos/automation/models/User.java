@@ -1,6 +1,8 @@
 package com.carlos.automation.models;
 
 
+import com.carlos.automation.models.builder.UserBuilder;
+
 public class User {
 
     private String id;
@@ -9,21 +11,13 @@ public class User {
     private String lastName;
     private String email;
 
-    public User(String title, String firstName, String lastName, String email) {
-        this.title = title;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
+    public User(UserBuilder userBuilder) {
+        this.id = userBuilder.getId();
+        this.title = userBuilder.getTitle();
+        this.firstName = userBuilder.getFirstName();
+        this.lastName = userBuilder.getLastName();
+        this.email = userBuilder.getEmail();
     }
-
-    public User(String id, String title, String firstName, String lastName, String email) {
-        this.id = id;
-        this.title = title;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-    }
-
     public String getId() {
         return id;
     }
@@ -42,5 +36,21 @@ public class User {
 
     public String getEmail() {
         return email;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || this.getClass() != obj.getClass()) {
+            return false;
+        }
+
+        User auxUser = (User)obj;
+        return this.title.equals(auxUser.getTitle())
+                && this.firstName.equals(auxUser.getFirstName())
+                && this.lastName.equals(auxUser.getLastName())
+                && this.email.equals(auxUser.getEmail());
     }
 }

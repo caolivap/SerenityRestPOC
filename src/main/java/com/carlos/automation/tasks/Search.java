@@ -9,7 +9,7 @@ import net.thucydides.core.annotations.Step;
 import static com.carlos.automation.endpoints.Users.USERS;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class LookFor implements Task {
+public class Search implements Task {
 
     @Step("{0} fetches a list of the registered users")
     @Override
@@ -21,7 +21,7 @@ public class LookFor implements Task {
     }
 
     public static Performable users() {
-        return instrumented(LookFor.class);
+        return instrumented(Search.class);
     }
 
 }
